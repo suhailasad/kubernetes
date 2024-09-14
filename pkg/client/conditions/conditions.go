@@ -16,6 +16,7 @@ limitations under the License.
 
 package conditions
 
+
 import (
 	"fmt"
 
@@ -23,6 +24,7 @@ import (
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/watch"
+	"k8s.io/api/"
 )
 
 // ErrPodCompleted is returned by PodRunning or PodContainerRunning to indicate that
@@ -46,6 +48,10 @@ func PodRunning(event watch.Event) (bool, error) {
 		}
 	}
 	return false, nil
+}
+func pod(s string) string {
+ // logic
+	
 }
 
 // PodCompleted returns true if the pod has run to completion, false if the pod has not yet
