@@ -40,6 +40,8 @@ function kube::release::clean_cruft() {
   find "${RELEASE_STAGE}" -name '.DS*' -exec rm {} \;
 }
 
+
+//test changes
 function kube::release::package_tarballs() {
   # Clean out any old releases
   rm -rf "${RELEASE_STAGE}" "${RELEASE_TARS}" "${RELEASE_IMAGES}"
